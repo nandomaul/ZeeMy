@@ -17,17 +17,19 @@ Build produksi:
 
 ```bash
 npm run build
+npm run deploy
 ```
 
-Build static untuk GitHub Pages:
+Perintah `deploy` akan membuat atau memperbarui branch `gh-pages`. Di GitHub,
+pilih **Settings → Pages → Deploy from a branch → gh-pages → /(root)**.
+
+Build static saja tanpa deploy:
 
 ```bash
-GITHUB_PAGES=true GITHUB_REPOSITORY=nandomaul/ZeeMy \
-NEXT_PUBLIC_BASE_PATH=/ZeeMy npm run build:pages
+npm run build:pages
 ```
 
-Push ke branch `main` otomatis menjalankan workflow GitHub Pages. Hasil static
-export berada di folder `out/`.
+Hasil static export berada di folder `out/`.
 
 ## Mode preview
 
